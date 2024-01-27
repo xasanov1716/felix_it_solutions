@@ -1,0 +1,60 @@
+name: felix_it_solutions
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  retrofit: '>=4.0.0 <5.0.0'
+  logger: any  #for logging purpose
+  json_annotation: ^4.8.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_bloc: ^8.1.3
+  dio: ^5.4.0
+  equatable: ^2.0.5
+  get_it: ^7.6.7
+  easy_localization: ^3.0.3
+  shared_preferences: ^2.2.2
+  flutter_svg: ^2.0.9
+  google_maps_flutter: ^2.5.0
+  location: ^5.0.3
+  permission_handler: ^11.0.1
+  injectable: ^2.3.2
+  mask_text_input_formatter: ^2.8.0
+  retrofit_generator: '>=7.0.0 <8.0.0'
+  build_runner: '>=2.3.0 <4.0.0'
+  json_serializable: ^6.6.2
+
+
+flutter:
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/location.png
+    - assets/images/circle_user.png
+    - assets/lang/
+    - assets/svg/
+    - assets/fonts/
+
+
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: assets/fonts/Mulish-Black.ttf
+        - asset: assets/fonts/Mulish-BlackItalic.ttf
+        - asset: assets/fonts/Mulish-Bold.ttf
+        - asset: assets/fonts/Mulish-BoldItalic.ttf
+        - asset: assets/fonts/Mulish-Italic.ttf
+        - asset: assets/fonts/Mulish-Regular.ttf
+        - asset: assets/fonts/Mulish-SemiBold.ttf
+        - asset: assets/fonts/Mulish-SemiBoldItalic.ttf
+
