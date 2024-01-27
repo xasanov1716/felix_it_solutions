@@ -1,15 +1,10 @@
 import 'package:felix_it_solutions/data/local/storage_repo.dart';
-import 'package:felix_it_solutions/data/models/ads/ads_request.dart';
-import 'package:felix_it_solutions/data/network/api_service.dart';
-import 'package:felix_it_solutions/data/repositories/api_repository.dart';
 import 'package:felix_it_solutions/presentation/auth/auth_screen.dart';
 import 'package:felix_it_solutions/utils/constants/constants.dart';
 import 'package:felix_it_solutions/utils/images/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 
 class EntranceScreen extends StatefulWidget {

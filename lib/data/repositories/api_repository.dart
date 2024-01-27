@@ -3,7 +3,6 @@ import 'package:felix_it_solutions/data/models/universal_response.dart';
 import 'package:felix_it_solutions/data/models/user/user_request.dart';
 import 'package:felix_it_solutions/data/network/api_service.dart';
 
-import '../models/ads/ads_model.dart';
 
 class ApiRepository {
 
