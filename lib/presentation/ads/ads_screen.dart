@@ -177,6 +177,7 @@ class _AdsScreenState extends State<AdsScreen> {
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.next,
                 maxLine: 2,
+                readOnly: true,
                 caption: 'address_by_loc'.tr(),
                 controller: addressController,
                 onChanged: (v){}),
