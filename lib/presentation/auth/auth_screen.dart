@@ -33,7 +33,10 @@ class _AuthScreenState extends State<AuthScreen> {
   listener: (context, state) {
     if(state is AuthSuccessState){
       showSnackbar(context, "success_register".tr());
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>AdsScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const AdsScreen()));
+    }
+    if(state is AuthErrorState){
+      showSnackbar(context, state.errorText);
     }
   },
   builder: (context, state) {
@@ -54,7 +57,7 @@ class _AuthScreenState extends State<AuthScreen> {
             SizedBox(
               height: height * 29 / 812,
             ),
-            Text("sign_up".tr(),style: TextStyle(color: Color(0xFF01001F),fontSize: 18,fontWeight: FontWeight.w700,fontFamily: 'Mulish'),),
+            Text("sign_up".tr(),style: const TextStyle(color: Color(0xFF01001F),fontSize: 18,fontWeight: FontWeight.w700,fontFamily: 'Mulish'),),
             SizedBox(
               height: height * 24 / 812,
             ),
