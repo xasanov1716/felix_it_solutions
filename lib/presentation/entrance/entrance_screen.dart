@@ -27,6 +27,11 @@ class _EntranceScreenState extends State<EntranceScreen> {
     'English'
   ];
 
+  @override
+  void initState() {
+    StorageRepository.putString('lan', 'uz_UZ');
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

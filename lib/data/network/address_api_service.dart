@@ -53,6 +53,7 @@ class AddressApiService {
         required String kind}) async {
     Response response;
     try {
+      print(StorageRepository.getString('lan'));
       response = await dio.get(
         '/1.x/',
         queryParameters: {

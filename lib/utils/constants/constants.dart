@@ -5,10 +5,10 @@ import 'package:easy_localization/easy_localization.dart';
  double height = 0;
  double width = 0;
 
- LatLng latLng = LatLng(41.26465, 69.21627);
+ LatLng latLng = LatLng(41.26465, 69.21627); 
 
  const baseUrl = "https://geocode-maps.yandex.ru";
- const String apiKey = "5635fd62-f8fa-480e-adab-b3b8608247a0";
+ const String apiKey = "0966317a-0c56-4ae7-a7ee-eda74212af4d";
 
  String firstName = '';
  String lastName = '';
