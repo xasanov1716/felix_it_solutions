@@ -31,7 +31,6 @@ class _AdsScreenState extends State<AdsScreen> {
   TextEditingController addressController = TextEditingController();
   final Completer<GoogleMapController> _controller =
   Completer<GoogleMapController>();
-
   @override
   void initState() {
     getLocation();
@@ -43,7 +42,7 @@ class _AdsScreenState extends State<AdsScreen> {
           latLng.latitude, latLng.longitude),
       zoom: 15,
     );
-        CameraPosition(
+    CameraPosition(
       target: LatLng(
           latLng.latitude, latLng.longitude),
       zoom: 15,
@@ -51,40 +50,6 @@ class _AdsScreenState extends State<AdsScreen> {
     super.initState();
   }
 
-  Future<void> getLocation() async {
-    Location location = Location();
-
-    bool serviceEnabled;
-    PermissionStatus permissionGranted;
-    LocationData locationData;
-
-    serviceEnabled = await location.serviceEnabled();
-    if (!serviceEnabled) {
-      serviceEnabled = await location.requestService();
-      if (!serviceEnabled) {
-        return;
-      }
-    }
-
-    permissionGranted = await location.hasPermission();
-    if (permissionGranted == PermissionStatus.denied) {
-      permissionGranted = await location.requestPermission();
-      if (permissionGranted != PermissionStatus.granted) {
-        return;
-      }
-    }
-    locationData = await location.getLocation();
-
-    latLng = LatLng(
-      locationData.latitude!,
-      locationData.longitude!,
-    );
-    location.onLocationChanged.listen((LocationData newLocation)
-    {
-      latLng = LatLng(newLocation.latitude!, newLocation.longitude!);
-      debugPrint("LONGITUDE:${newLocation.longitude}");
-    });
-  }
 
 
   @override

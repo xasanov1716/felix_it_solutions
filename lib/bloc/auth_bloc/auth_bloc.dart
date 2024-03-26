@@ -17,7 +17,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthLoadingState());
       try{
         final res = await apiRepository.register(event.userRequest);
-
         emit(AuthSuccessState());
       }
           catch(e){

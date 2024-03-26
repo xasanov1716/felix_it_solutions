@@ -30,6 +30,7 @@ class _EntranceScreenState extends State<EntranceScreen> {
   @override
   void initState() {
     StorageRepository.putString('lan', 'uz_UZ');
+    getLocation();
     super.initState();
   }
 

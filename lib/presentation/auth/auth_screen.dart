@@ -122,6 +122,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     if(password == confirmPassword){
                       if(firstName.isNotEmpty && lastName.isNotEmpty && phone.isNotEmpty && password.isNotEmpty){
                         context.read<AuthBloc>().add(RegisterEvent(userRequest: UserRequest(firstName: firstName, lastName: lastName, phoneNumber: phone, password: password)));
+                        getLocation();
                       }else{
                         showSnackbar(context, "fields_incomplete".tr());
                       }
